@@ -3,7 +3,7 @@
 ## Protocol
 
 1. Record for each tool: product, plan, model shown in the UI, test date, how files were loaded (Project, custom GPT, Gem, upload).
-2. Load all 32 files in round 1. Give no instructions beyond the tool's defaults.
+2. Load all 25 files in round 1. Give no instructions beyond the tool's defaults.
 3. Ask each question in a **new chat**. Paste the question exactly as written.
 4. Run each question **twice**. It counts as correct only if both runs are correct.
 5. Save every answer as plain text in `results/<tool>-round<N>/Qxx-runY.md`.

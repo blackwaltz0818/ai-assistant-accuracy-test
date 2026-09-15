@@ -22,7 +22,9 @@
 | D | Draft looks like policy | Proposals saved next to approved documents |
 | X | Answer not in any file | Staff ask things the files never cover |
 
-## Documents (32)
+## Documents (25)
+
+> **Trimmed from 32 to 25 on 2026-09-15.** ChatGPT Plus allows 25 files per project ("Upgrade to Pro to add 40 files"). Removed 5 files no question uses (D12 expense policy, D18 supplier contacts, D28 brand voice guide, D29 onboarding checklist, D32 duplicate of D13). Merged D06 into D24 and D20 into D19. IDs are kept stable, so gaps are expected. Fewer noise files make retrieval easier than in a real folder.
 
 Current version of each policy is defined by **D30 Policy Index**. That is the ground truth for "latest" questions.
 
@@ -33,37 +35,30 @@ Current version of each policy is defined by **D30 Policy Index**. That is the g
 | D03 | Return Policy v3 final2.docx | docx | **Current.** 45 days for unused items; free return label over **$100**; international customers pay return shipping (2026-04) | — |
 | D04 | Shipping Rates 2025.xlsx | xlsx | Standard $6.95; free over $50 | V, S |
 | D05 | Shipping Rates 2026.xlsx | xlsx | **Current.** Standard $7.95; free over $60; Alaska/Hawaii flat $19.95, no free shipping; Canada $24.95 | S |
-| D06 | International Shipping FAQ.docx | docx | Ships to Canada only outside the US; 7–14 business days; duties paid by customer | — |
 | D07 | Warranty Policy.pdf | pdf (text) | Furniture 1 year; textiles 90 days; decor none | — |
 | D08 | Price Match Policy.docx | docx | Within 14 days of purchase; authorized retailers only; no marketplace sellers; cannot be combined with other promotions | — |
 | D09 | Holiday Returns Memo 2025.docx | docx | Orders Nov 1–Dec 24 2025 returnable until Jan 31 2026 | V (expired) |
 | D10 | Employee Handbook 2026.pdf | pdf (text) | **Current.** 15 PTO days; remote Fridays | — |
 | D11 | Employee Handbook 2023.pdf | pdf (text) | 12 PTO days | V |
-| D12 | Expense Policy.docx | docx | Travel meals up to $40/day; manager approval over $500 | — |
 | D13 | CS SOP - Damaged Items.docx | docx | Customer sends photos within 7 days; replace or refund; no return needed if item value under $40 | — |
 | D14 | CS SOP - Refund Escalation.docx | docx | Refunds over $250 need CS lead approval | — |
 | D15 | CS Macros (copy-paste replies).docx | docx | Return macro still says "30 days" | C (with D03) |
 | D16 | Supplier Agreement - Oakridge Textiles.pdf | pdf (text) | Net 45; MOQ 200 units; lead time 35 days | — |
 | D17 | Supplier Agreement - Brightwood Furniture.pdf | pdf (text) | Net 30; lead time 60 days; defect rate over 2% earns credit | — |
-| D18 | Supplier contacts.xlsx | xlsx | Contact names and reorder emails (fictional) | S |
-| D19 | Q2 2026 Sales Summary.xlsx | xlsx | Furniture $412,300; textiles $186,900; decor $97,450 | S |
-| D20 | Q1 2026 Sales Summary.xlsx | xlsx | Furniture $365,800; textiles $201,200; decor $88,100 | S |
+| D19 | 2026 Sales Summary.xlsx | xlsx, 2 sheets | Q1: furniture $365,800, textiles $201,200, decor $88,100. Q2: furniture $412,300, textiles $186,900, decor $97,450 | S |
 | D21 | Product Care Guide.pdf | pdf (text) | Linen: cold wash; oak tables: oil every 6 months | — |
 | D22 | Warehouse Lease (signed scan).pdf | pdf (image only) | Rent $8,200/month; term ends 2027-06-30 | F (tools with image reading may still read it; round 1 decides) |
 | D23 | Ops meeting notes 2026-05-12.docx | docx | Decision: switch carrier from SwiftShip to ParcelPoint from 2026-07-01 | C (with D24) |
-| D24 | Shipping FAQ (website copy).docx | docx | Still says "we ship with SwiftShip"; 1–2 days processing | C |
+| D24 | Shipping FAQ (website copy).docx | docx | Still says "we ship with SwiftShip"; 1–2 days processing. Also: ships to US and Canada only; Canada 7–14 business days; duties paid by customer; international customers pay return shipping | C |
 | D25 | Wholesale Inquiries Process.docx | docx | Minimum order $1,500; 20% discount | — |
 | D26 | Promo Calendar 2026.xlsx | xlsx | Black Friday 25% sitewide, Nov 27–30 2026 | S |
 | D27 | Gift Card Terms.docx | docx | No expiry; not redeemable for cash except where law requires | — |
-| D28 | Brand Voice Guide.pdf | pdf (text) | Tone rules; no policy facts (noise) | — |
-| D29 | New CS Hire Onboarding Checklist.docx | docx | Week 1 tasks; links to SOPs (noise) | — |
 | D30 | Policy Index - current versions.xlsx | xlsx | Lists current files: D03, D05, D10, D13, D14 | S |
 | D31 | Loyalty Program Proposal.docx | docx | 5% points back; marked "draft, not approved" in the body only | D |
-| D32 | damaged items process copy.docx | docx | Exact duplicate of D13 | V (duplicate) |
 
 ## Fix round (what gets changed before round 2)
 
-1. Move D01, D02, D04, D09, D11, D32 to an archive folder that the AI tool does not read.
+1. Move D01, D02, D04, D09, D11 to an archive folder that the AI tool does not read.
 2. Rename current files so the name says current: `Return Policy (current, 2026-04).docx`.
 3. Update D15 and D24 to match current policy. Mark D31 as draft in the file name.
 4. Leave D22 as it is (Jason 2026-09-15). If a tool cannot read it, report it as a limit the client must handle.

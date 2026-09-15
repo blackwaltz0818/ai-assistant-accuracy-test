@@ -1,7 +1,7 @@
 """Generate the fictional Lantern Lane Goods document set.
 
 Run from the repo root:  python3 scripts/generate_documents.py
-Writes 32 files to documents/. Everything is fictional.
+Writes 25 files to documents/ (ChatGPT Plus project limit, 2026-09-15). Everything is fictional.
 
 Dependencies: python-docx, reportlab, Pillow. The .xlsx files are written with
 the standard library only (zipfile + minimal SpreadsheetML).
@@ -202,18 +202,6 @@ def build():
         ["2026-01-05", "Alaska/Hawaii 16.95 -> 19.95", "Ops"],
     ])])
 
-    # D06
-    write_docx("International Shipping FAQ.docx", "International Shipping FAQ", [
-        ("h", "Where do you ship?"),
-        "We ship within the United States and to Canada. We do not ship to other countries at this time.",
-        ("h", "How long does shipping to Canada take?"),
-        "Usually 7-14 business days after the order ships.",
-        ("h", "Who pays duties and taxes?"),
-        "The customer pays any duties, taxes and brokerage fees on delivery.",
-        ("h", "Can I return an international order?"),
-        "Yes, under our standard return policy. International customers pay return shipping.",
-    ])
-
     # D07
     write_pdf("Warranty Policy.pdf", "%s - Limited Warranty" % COMPANY, [
         "This warranty covers defects in materials and workmanship under normal home use.",
@@ -266,12 +254,6 @@ def build():
         "Remote work needs manager approval each time.",
     ] + common_hb)
 
-    # D12
-    write_docx("Expense Policy.docx", "Expense Policy", [
-        ["Travel meals: up to $40 per day.", "Any single expense over $500 needs manager approval before purchase.",
-         "Submit receipts within 30 days to the bookkeeper."],
-    ])
-
     # D13 / D32 damaged items (duplicate)
     damaged = ("CS SOP - Damaged Items", [
         "Use this SOP when a customer reports an item that arrived damaged.",
@@ -283,7 +265,6 @@ def build():
         "Refund approval limits are in the Refund Escalation SOP.",
     ])
     write_docx("CS SOP - Damaged Items.docx", damaged[0], damaged[1])
-    write_docx("damaged items process copy.docx", damaged[0], damaged[1])
 
     # D14
     write_docx("CS SOP - Refund Escalation.docx", "CS SOP - Refund Escalation", [
@@ -316,23 +297,14 @@ def build():
         ("h", "3. Defects"), "If the defect rate in a quarter is over 2%, Supplier gives a credit equal to the cost of the defective units.",
     ])
 
-    # D18
-    write_xlsx("Supplier contacts.xlsx", [("Contacts", [
-        ["Supplier", "Contact", "Role", "Email", "Reorder method"],
-        ["Oakridge Textiles", "Dana Whitfield", "Account manager", "orders@oakridge-textiles.example", "Email PO"],
-        ["Brightwood Furniture", "Luis Ortega", "Sales rep", "sales@brightwood-furniture.example", "Supplier portal"],
-        ["Harbor Glassworks", "Mina Patel", "Owner", "hello@harbor-glass.example", "Email PO"],
-    ])])
-
-    # D19 / D20 sales
-    for fname, q, vals in (("Q1 2026 Sales Summary.xlsx", "Q1 2026", (365800, 201200, 88100)),
-                           ("Q2 2026 Sales Summary.xlsx", "Q2 2026", (412300, 186900, 97450))):
-        write_xlsx(fname, [(q, [
-            ["Category", "Revenue (USD)", "Orders"],
-            ["Furniture", vals[0], int(vals[0] / 610)],
-            ["Textiles", vals[1], int(vals[1] / 95)],
-            ["Decor", vals[2], int(vals[2] / 48)],
-        ])])
+    # D19 sales (Q1 and Q2 as two sheets)
+    def sales(q, vals):
+        return (q, [["Category", "Revenue (USD)", "Orders"],
+                    ["Furniture", vals[0], int(vals[0] / 610)],
+                    ["Textiles", vals[1], int(vals[1] / 95)],
+                    ["Decor", vals[2], int(vals[2] / 48)]])
+    write_xlsx("2026 Sales Summary.xlsx", [sales("Q1 2026", (365800, 201200, 88100)),
+                                           sales("Q2 2026", (412300, 186900, 97450))])
 
     # D21
     write_pdf("Product Care Guide.pdf", "Product Care Guide", [
@@ -370,6 +342,14 @@ def build():
         ("h", "Which carrier do you use?"), "We ship all orders with SwiftShip.",
         ("h", "When will my order ship?"), "Orders ship within 1-2 business days.",
         ("h", "Do you offer free shipping?"), "Yes, on qualifying US orders. See checkout for details.",
+        ("h", "Where do you ship?"),
+        "We ship within the United States and to Canada. We do not ship to other countries at this time.",
+        ("h", "How long does shipping to Canada take?"),
+        "Usually 7-14 business days after the order ships.",
+        ("h", "Who pays duties and taxes?"),
+        "The customer pays any duties, taxes and brokerage fees on delivery.",
+        ("h", "Can I return an international order?"),
+        "Yes, under our standard return policy. International customers pay return shipping.",
     ])
 
     # D25 - D29
@@ -386,14 +366,6 @@ def build():
     write_docx("Gift Card Terms.docx", "Gift Card Terms", [
         ["Gift cards do not expire.", "Gift cards cannot be redeemed for cash, except where the law requires it.",
          "Lost or stolen gift cards cannot be replaced."],
-    ])
-    write_pdf("Brand Voice Guide.pdf", "Brand Voice Guide", [
-        "We sound like a friendly neighbor who knows a lot about homes: warm, clear, never pushy.",
-        ["Use short sentences.", "Say 'we' and 'you'.", "No all-caps sales language."],
-    ])
-    write_docx("New CS Hire Onboarding Checklist.docx", "New CS Hire - Week 1", [
-        ["Day 1: accounts for helpdesk and Shopify", "Day 2: read Return Policy and CS SOPs",
-         "Day 3: shadow a senior agent", "Day 5: answer tickets with review"],
     ])
 
     # D30 policy index

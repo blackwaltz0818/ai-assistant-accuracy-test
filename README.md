@@ -8,7 +8,7 @@ This repo tests ChatGPT, Claude and Gemini on the same set of files from a ficti
 
 ## Method
 
-1. Load the 32 files in `documents/` into each assistant by direct upload.
+1. Load the 25 files in `documents/` into each assistant by direct upload.
 2. Ask the 25 questions in `test/questions.md`. Each question runs twice, in a new chat each time.
 3. Score each answer with `test/scoring-sheet.md`. Tag every miss with a cause.
 4. Fix the files and add instructions. Ask the same questions again.
@@ -19,7 +19,7 @@ The questions and expected answers were locked before the first test.
 
 | Path | Content |
 |---|---|
-| `documents/` | The 32 test files |
+| `documents/` | The 25 test files |
 | `test/company-and-documents.md` | The company, each file, and the problem planted in it |
 | `test/questions.md` | 25 questions with expected answers |
 | `test/scoring-sheet.md` | Test protocol, grades and cause codes |

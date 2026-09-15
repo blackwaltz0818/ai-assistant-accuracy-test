@@ -27,7 +27,7 @@
 
 | # | Question | Expected answer | Source | Trap |
 |---|---|---|---|---|
-| Q11 | Which product category grew the most from Q1 to Q2 2026, in dollars? | Furniture, +$46,500 (decor +$9,350; textiles −$14,300) | D19, D20 | — |
+| Q11 | Which product category grew the most from Q1 to Q2 2026, in dollars? | Furniture, +$46,500 (decor +$9,350; textiles −$14,300) | D19 (both sheets) | — |
 | Q12 | What was total revenue in Q2 2026? | $696,650 | D19 | — |
 | Q13 | A customer in Hawaii orders $75 of decor. What is the shipping cost? | $19.95 (no free shipping to Alaska/Hawaii) | D05 | Free (over $60 rule) |
 | Q14 | Which supplier has the longer lead time, and by how many days? | Brightwood Furniture, 25 days longer (60 vs 35) | D16, D17 | — |
@@ -38,7 +38,7 @@
 | # | Question | Expected answer | Source | Trap |
 |---|---|---|---|---|
 | Q16 | A $300 oak table arrived damaged. The customer sent photos on day 5. What do we do, and who approves the refund? | Eligible (photos within 7 days); replace or refund; item must come back (value over $40); a refund needs CS lead approval (over $250) | D13, D14 | Misses one of the two rules |
-| Q17 | A customer in Canada wants to return an unused item after 40 days. Can they, and who pays return shipping? | Yes (within 45 days); the customer pays return shipping | D03, D06 | "No, 30 days"; "free label" |
+| Q17 | A customer in Canada wants to return an unused item after 40 days. Can they, and who pays return shipping? | Yes (within 45 days); the customer pays return shipping | D03, D24 | "No, 30 days"; "free label" |
 | Q18 | How should a customer care for an oak table, and how long is it under warranty? | Oil every 6 months; 1-year warranty | D21, D07 | — |
 | Q19 | During Black Friday, can a customer use the 25% sale and a price match together? | No. Price match cannot be combined with other promotions | D26, D08 | "Yes" |
 | Q20 | A customer bought an item 10 days ago and found it cheaper on a marketplace seller. Do we match? | No. Price match covers authorized retailers only, not marketplace sellers | D08 | "Yes, within 14 days" |
@@ -48,7 +48,7 @@
 | # | Question | Expected answer | Source | Trap |
 |---|---|---|---|---|
 | Q21 | Do we have a loyalty points program? | No approved program; there is only a draft proposal | D31 | "Yes, 5% back" |
-| Q22 | Can customers in Mexico order from us? | No. We ship to the US and Canada only | D06 | Invents a Mexico policy |
+| Q22 | Can customers in Mexico order from us? | No. We ship to the US and Canada only | D24 | Invents a Mexico policy |
 | Q23 | Who is the CEO of Brightwood Furniture? | Not in the files | — | Invents a name |
 | Q24 | Is there a holiday return extension for 2026? | No 2026 decision in the files; the only memo is for 2025 and has expired | D09 | Applies the 2025 dates to 2026 |
-| Q25 | What was our total revenue for 2025? | Not in the files (only Q1 and Q2 2026 summaries exist) | — | Invents a figure or sums Q1+Q2 2026 |
+| Q25 | What was our total revenue for 2025? | Not in the files (only the Q1 and Q2 2026 sheets exist) | — | Invents a figure or sums Q1+Q2 2026 |
