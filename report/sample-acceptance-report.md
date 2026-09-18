@@ -1,10 +1,12 @@
 # Acceptance report — sample
 
 **Client:** Lantern Lane Goods (fictional, 14-person online home goods store)
-**Work:** connect the company's own files to the AI assistant the company already pays for, then test the answers
+**Work:** Document Starter — sort the company's files, load them into the AI the company already pays for, then test the answers
 **Tool tested:** ChatGPT Plus — **2026-09-15**
 
-> This is a sample of the report every client gets at handover. The company and its 25 files are invented for this demo. The method and the report format are the real ones.
+> This is a sample of the report every Document Starter client gets at handover. The company and its files are invented for this demo. The method and the report format are the real ones.
+>
+> A Document Starter runs one week from the day I have your files, and the test uses about thirty questions your own staff already ask. This demo folder was small, so it ran twenty-five.
 
 ---
 
@@ -47,6 +49,15 @@ A score is only as good as the questions. These 25 were written from what staff 
 - The test covers these 25 questions on this file set, on the test date. Model updates change answers.
 - The problems in this demo folder were planted on purpose. A real folder is bigger and messier.
 - Tested on a personal paid plan. Business and Enterprise plans have different file limits and connectors.
+
+## 6. What happens after this report
+
+The file set is yours and it will drift. Two things keep the answers correct:
+
+1. **One owner for the folder.** When a policy changes, the old file gets archived the same day. The assistant repeats whatever is in the folder, so a stale file is a wrong answer waiting to happen.
+2. **The question set stays.** Run the same questions after the next batch of changes. If the score drops, the folder moved, not the tool.
+
+If your folder outgrows the plan's file limit, or you need answers across years of files rather than a working set, that is a different build with its own quote and a monthly fee. I would rather say that here than after you have paid for the starter.
 
 ---
 
