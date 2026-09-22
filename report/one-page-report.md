@@ -3,6 +3,8 @@
 **Test report — Lantern Lane Goods (fictional online store) — 2026-09-15**
 Draft. Tool tested so far: ChatGPT Plus.
 
+> 2026-09-22: a second, controlled round is in [one-page-report-index-2026-09-22.md](one-page-report-index-2026-09-22.md) — same folder, one file removed, 7.5/10 vs 10/10.
+
 ## Result
 
 **ChatGPT answered 24.5 of 25 questions correctly from the store's own files.**
