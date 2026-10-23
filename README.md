@@ -40,4 +40,4 @@ The questions and expected answers were locked before the first test and were no
 
 ## Who wrote this
 
-Jason Chuang. I sort out company documents, connect them to the AI a company already pays for, and test the answers before handover. The report a client receives looks like `report/sample-acceptance-report.md`. jasonchuang.com
+Jason Chuang. I sort out company documents, connect them to the AI a company already pays for, and test the answers before handover. The report a client receives looks like `report/sample-acceptance-report.md`. [jasonchuang.com](https://jasonchuang.com)
